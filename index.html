@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="jquery.nouislider.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<title>1WALL</title>
+	<style type="text/css">
+		body {
+			background-color: #ddd;
+			font-family: Helvetica;
+			font-size: 25px;
+			text-align: center;
+			padding-top: 0px;
+		}
+
+		.fade {
+			display: none;
+		}
+
+		a:link {color: #000; text-decoration: none; font-weight: bold;}      /* unvisited link */
+		a:visited {color: #000; text-decoration: none; font-weight: bold;}   /* visited link */
+		a:hover {color: #000; text-decoration: underline; font-weight: bold;}     /* mouse over link */
+		a:active {color: #000; text-decoration: none; font-weight: bold;}    /* selected link */
+
+	</style>
+</head>
+
+<body>
+	<br><br>
+	<br><br>
+	<header>
+		Welcome to 1WALL beta!<br>
+		<span style="font-size: 18px;">a graffiti wall on the internet.</span>
+	</header>
+	<p id="_1" class="fade">
+		Use your arrow keys to move <b>left</b> and <b>right</b>
+	</p>
+	<p id="_2" class="fade">
+		Click on <img id="drawButton" src="draw.png" width="25px" height="25px"> or press <b>D</b> to start drawing
+	</p>
+	<p id="_3" class="fade">
+		Select colours from the palette at the bottom & press <b>C</b> to clear your drawing
+	</p>
+	<p id="_4" class="fade">
+		Click on <img id="drawButton" src="save.png" width="25px" height="25px"> or press <b>D again</b> to save your drawing
+	</p>
+	<p id="_5" class="fade">
+		<a href="wall.html">»» GO TO THE WALL</a>
+	</p>
+</body>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		setTimeout(function(){
+			$("#_1").fadeIn(1500, function() {
+		    	$("#_2").fadeIn(1500, function() {
+		    		$("#_3").fadeIn(1500, function() {
+		    			$("#_4").fadeIn(1500, function() {
+		    				$("#_5").fadeIn(1500);
+		    			});
+		    		});
+		    	});
+		    });
+		}, 1500);
+	});
+</script>
+
+</html>
