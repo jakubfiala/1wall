@@ -1,15 +1,18 @@
 <?php
-	//echo "fuck me ";
+	//define upload directory
 	define('UPLOAD_DIR', 'data/');
+	//get query data
 	$img = $_POST['data'];
 	$lng = $_POST['lng'];
 	$hor = $_POST['hor'];
 	$ver = $_POST['ver'];
+	//format image data
 	$img = str_replace('data:image/png;base64,', '', $img);
 	$img = str_replace(' ', '+', $img);
 	$data = base64_decode($img);
 	$image = imagecreatefromstring($data);
 	imagealphablending($image,true);
+	//chop up and save tiles
 	for ($x=0; $x<$hor; $x++) {
 		for ($y=0; $y<$ver; $y++) {
 			$xlng = $x+$lng;
